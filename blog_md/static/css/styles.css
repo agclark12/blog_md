@@ -1,0 +1,240 @@
+html {
+  height: 100%;
+  width: 100%
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin:0;
+  padding: 0;
+  padding-bottom: 0;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 6rem;    /* Footer height */
+}
+
+.banner {
+  color: black;
+}
+
+.mid-width {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    min-height: 100%
+    padding-top: 64px;
+    width: 94%;
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+
+
+
+.post-title {
+  color: black;
+  text-decoration: none;
+}
+
+.research-link {
+  color: black;
+  text-decoration: none;
+}
+
+.paper-link {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.banner-img {
+  vertical-align: middle;
+  display:inline-block;
+}
+
+.form-aligned {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.blog-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.research-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height:300px;
+}
+
+.news-text {
+  width:85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-caption {
+  width:85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.news-img {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.research-video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 40%;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+
+.caption {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.nobr {
+    white-space: nowrap
+}
+
+p {
+   margin: 0px;
+   padding: 0px;
+   margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto
+}
+
+dt {
+  grid-column-start: 1;
+}
+
+dd {
+  grid-column-start: 2;
+}
+
+.space-below{
+    margin-bottom: 2cm
+}
+
+.space-below-small{
+    margin-bottom: 15px;
+}
+
+.reduce-whitespace {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  line-height: 30px;
+  height: 30px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  clear: both;
+}
+
+.footer-left {
+    float:left;
+    margin-left:15px;
+}
+
+.footer-right {
+    float:right;
+    margin-right:15px;
+}
+
+hr.double {
+	border-top: 3px double #8c8b8b;
+}
+
+.collapsible {
+  cursor: pointer;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+}
+
+.justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/*Adjusts the padding for the brand to get the links to line up correctly with the logo*/
+.navbar.navbar-expand-md.navbar-light.bg-light .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 7px;
+}
+
+.col-pad { margin:10px; padding:10px; }

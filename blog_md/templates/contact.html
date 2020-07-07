@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+
+    <div class="four columns">
+        <h3>Address:</h3>
+        <p class="space-below-small">
+            Andrew Clark, Vignjevic Team<br>
+            Institut Curie / UMR 144<br>
+            12 Rue Lhomond<br>
+            75005 Paris<br>
+            FRANCE
+        </p>
+        <h3>Email:</h3>
+        <p class="space-below-small"><a href="mailto:andrew.clark@curie.fr">andrew.clark@curie.fr</a></p>
+    </div>
+
+    <div class="four columns">
+        <h3>Online profiles:</h3>
+        <p class="space-below-small"><a href="https://www.researchgate.net/profile/Andrew_Clark31"><img src={{url_for('static', filename='content/media/research_gate_logo.png')}} alt="rg_logo"  width="200"/></a></p>
+        <p class="space-below-small"><a href="https://www.linkedin.com/in/andrew-clark-05201422"><img src={{url_for('static', filename='content/media/linkedin_logo.jpg')}} alt="linkedin_logo" width="200" /></a></p>
+        <p class="space-below-small"><a href="http://scholar.google.de/citations?user=FlsZVCsAAAAJ&hl=en&oi=sra"><img src={{url_for('static', filename='content/media/google_scholar_logo.png')}} alt="google_scholar_logo"  width="200"/></a></p>
+    </div>
+
+</div>
+
+{% endblock content %}

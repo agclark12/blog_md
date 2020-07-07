@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3 class="space-below">Add a new book to booklist</h3>
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.year_read) }}
+        {{ render_field(form.title) }}
+        {{ render_field(form.author) }}
+        {{ render_field(form.year_published) }}
+        {{ render_field(form.no_pages) }}
+    </dl>
+    {{ form.submit }} <span style="padding-left:15px">{{ form.cancel }}</span>
+</form>
+
+{% endblock content %}

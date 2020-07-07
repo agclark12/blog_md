@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>Blog</h4>
+{% if not current_user.is_anonymous %}
+<h6><a href="{{ url_for('post_upload') }}">Upload a new post</a></h6>
+{% endif %}
+<hr class="double">
+{% for post in posts %}
+    <div>
+        <h4 class="reduce-whitespace"><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}" class="post-title">{{ post.title }}</a></h4>
+        <h7>{{ post.date }} <a href="{{ url_for('posts_tagged', tag=post.tag) }}">{{post.tag}}</a></h7><br>
+        <p style="font-size:20px">{{post.summary}}</p>
+        <h7><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">read more...</a></h7>
+        {% if not post == posts[-1] %}
+            <hr>
+        {% endif %}
+    </div>
+{% endfor %}
+<a>&nbsp;</a>
+{% endblock content %}

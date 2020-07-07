@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>All the Books I've Ever Read</h4>
+<h5>(for disclaimers, see <a href="{{ url_for ('post', name='2020-05-05_booklist') }}">relevant blog entry</a>)</h5>
+<table>
+    <thead>
+        <tr>
+            <th>Year Read</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year Published</th>
+<!--                <th>Number of Pages</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        {% for line in booklist[:-1] %}
+            <tr>
+                <td>{{ line["year_read"] }}</td>
+                <td>{{ line["title"] }}</td>
+                <td>{{ line["author"] }}</td>
+                <td>{{ line["year_published"] }}</td>
+                {% if not current_user.is_anonymous %}
+                    <td><a href="{{ url_for('edit_book',id=line["id"]) }}">Edit</a></td>
+                    <td><a href="{{ url_for('delete_book',id=line["id"]) }}">Delete</a></td>
+<!--                        this will be replaced with a link to edit this entry-->
+                {% endif %}
+            </tr>
+        {% endfor %}
+        <tr>
+            <th colspan="4"><a id="current"></a>Currently Reading...</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ booklist[-1]["title"] }}</td>
+            <td>{{ booklist[-1]["author"] }}</td>
+            <td>{{ booklist[-1]["year_published"] }}</td>
+<!--              <td>{{ booklist[-1]["no_pages"] }}</td>-->
+            {% if not current_user.is_anonymous %}
+                <td><a href="{{ url_for('edit_book',id=booklist[-1]["id"]) }}">Edit</a></td>
+                <td><a href="{{ url_for('delete_book',id=booklist[-1]["id"]) }}">Delete</a></td>
+            {% endif %}
+        </tr>
+    </tbody>
+</table>
+<!--    <h5>Current Book Count: {{ bookcount }}</h5>-->
+<!--    <h5>Current Page Count: {{ pagecount }}</h5>-->
+<h6>Last Updated: {{ updated_date }}</h6>
+{% if not current_user.is_anonymous %}
+<h6><a href="{{ url_for('add_book') }}">Add Book</a></h6>
+{% endif %}
+
+{% endblock content %}

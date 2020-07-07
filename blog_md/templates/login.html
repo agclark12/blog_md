@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>Sign In</h4>
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+    <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.username) }}
+        {{ render_field(form.password) }}
+        {{ render_field(form.remember_me) }}
+    </dl>
+    <p><input type=submit value="Sign In"></p>
+</form>
+
+{% endblock content %}

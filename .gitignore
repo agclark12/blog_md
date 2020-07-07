@@ -1,0 +1,11 @@
+*.DS_Store
+*.idea
+venv
+venv/*
+blog_md/db/db.db
+misc
+misc/*
+*__pycache__
+*.mp4
+*.png
+*.jpg

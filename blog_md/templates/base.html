@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/github-markdown.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='content/media/favicon.ico') }}">
+
+        <title>{{title}} - Andrew G. Clark</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170128640-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-170128640-1');
+        </script>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <a class="navbar-brand" href="{{ url_for('index') }}">
+                        <img src={{url_for('static', filename='content/media/logo_clark.png')}} width='100px' class="banner-img" alt="logo_clark.png"/>
+                    </a>
+                    <button class="navbar-toggler order-lg-last" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="{{ url_for('research_interests') }}">Research&nbsp;&nbsp;</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link" href="{{ url_for('publications') }}">Publications&nbsp;&nbsp;</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('resources') }}">Resources&nbsp;&nbsp;</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('posts') }}">Blog&nbsp;&nbsp;</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('about_me') }}">About Me&nbsp;&nbsp;</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('cv') }}">CV</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            {% if not current_user.is_anonymous %}
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:#0FA0CE" href="{{ url_for('logout') }}">Sign Out</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </nav>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <script>
+                    var messages = {{ messages | safe }};
+                    for (var i=0; i<messages.length; i++) {
+                        alert(messages[i]);
+                    }
+                </script>
+            {% endif %}
+        {% endwith %}
+        <div class="mid-width">
+            <a>&nbsp;</a>
+            {% block content %}
+            {% endblock content %}
+        </div>
+        </div>
+            <footer class="footer">
+                <div class="footer-left">&copy; Andrew G. Clark, 2020</div>
+                <div class="footer-right">
+                    <a href="{{  url_for('index') }}" class="post-title">Home&nbsp;</a>
+                    <a href="{{  url_for('posts') }}" class="post-title d-none d-sm-inline">Blog&nbsp;</a>
+                    <a href="{{  url_for('links') }}" class="post-title d-none d-sm-inline">Friends</a>&nbsp;
+                    <a href="{{  url_for('contact') }}" class="post-title">Contact</a>
+                </div>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

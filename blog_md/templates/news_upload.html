@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3 class="space-below">Upload a new post</h3>
+{% from "_formhelpers.html" import render_field %}
+<form action="" method=post enctype="multipart/form-data">
+    <dl>
+        {{ form.csrf_token }}
+        {{ render_field(form.text_file) }}
+        {{ render_field(form.image_file) }}
+    </dl>
+    {{ form.submit }} <span style="padding-left:15px">{{ form.cancel }}</span>
+</form>
+
+{% endblock content %}

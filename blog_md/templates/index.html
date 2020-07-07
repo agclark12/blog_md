@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4>Welcome!</h4>
+<p style="margin-bottom:20px">
+    I am a cell biologist currently working in Paris, France. I am interested in understanding
+    how the mechanical properties of cells and tissues influence biological processes. I split
+    my time between experimental biology and developing software for image/data analysis.
+</p>
+<hr class="double">
+<center><h3>New and notable</h3></center>
+<div class="container-fluid">
+    <div class="row">
+    {% for i in range(3) %}
+        <div class="col-sm-4">
+            <div class="row news-img">
+                <img src="{{ url_for('static', filename='content/news/media/'+news_list[i][0]) }}" alt="news_{{i}}">
+            </div>
+            <div class="row news-caption text-center">
+                <h5 class="news-caption"><b>{{ news_list[i][1] }}</b></h5>
+            </div>
+            <div class="row news-text">
+                <p class="justify">{{ news_list[i][2] }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<p style="clear: both"></p>
+{% if not current_user.is_anonymous %}
+<h6><a href="{{ url_for('news_upload') }}">Upload a new news article</a></h6>
+{% endif %}
+<hr class="double">
+<!--<p>Learn more about my current and previous research <a href="{{ url_for('research_interests') }}">here</a></p>-->
+<center><h3>Recent Blog Posts</h3></center>
+<h7>&nbsp;</h7>
+{% for post in posts %}
+    <div>
+        <h4 class="reduce-whitespace"><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}" class="post-title">{{ post.title }}</a></h4>
+        <h7>{{ post.date }} <a href="{{ url_for('posts_tagged', tag=post.tag) }}">{{post.tag}}</a></h7><br>
+        <p style="font-size:20px">{{post.summary}}</p>
+        <h7><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">read more...</a></h7>
+        <hr>
+    </div>
+{% endfor %}
+<p style="margin-top:-10px"></p>
+<p>For all blog posts, click <a href="{{ url_for('posts') }}">here</a>.</p>
+{% endblock content %}

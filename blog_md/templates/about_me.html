@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>
+    <img src="{{url_for('static', filename='content/media/photo_clark.jpg')}}" width="150" style= "border:2px solid black"  alt="photo">
+</p>
+<p class="space-below-small">
+    Hi, my name is Andrew. I grew up in Wisconsin and received my Bachelor's degree in
+    Molecular Biology from the University of Wisconsin-Madison in 2007.
+    Following my undergraduate work, I moved to Dresden, Germany to do my PhD in Cell Biology
+    and Biophysics, which I completed in 2013. Following a short follow-up postdoc
+    at University College London, I moved to Paris to do a postdoc at the Institut Curie.
+</p>
+<p class="space-below-small">
+    During my time at Curie, I have been interested in understanding how cells move
+    together in groups in different environments.
+    This has ranged from projects looking at migration of large aggregates of cells
+    in extracellular matrices <i>in vitro</i> to collective movements of cells in tumor
+    explants.
+</p>
+<p class="space-below-small">
+    These days, I typically split my time about 50/50 between experiments in the lab and
+    writing software to analyze my data. For the most part, my image and data analysis and
+    visualization software is written in Python using various scientific libraries.
+    I also rely pretty heavily on the ImageJ Macro scripting language for image pre-processing.
+    At the moment, I am branching out to learn new techniques to incorporate into my
+    data analysis software.
+</p>
+<p class="space-below-small">
+    If you would like to know more, please feel free to have a look at my
+    <a href="{{ url_for('research_interests') }}">research interests</a>
+    or my <a href="{{ url_for('cv') }}">CV</a> or visit my online scientific profiles
+    on my <a href="{{ url_for('contact') }}">contact page</a>.
+</p>
+{% endblock content %}

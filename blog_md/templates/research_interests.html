@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>Research Interests</h4>
+
+<button type="button" class="collapsible">Collective Migration</button>
+<div class="content">
+   <p class="justify">
+        Cell migration is an essential process in a number of biological contexts. During development,
+        for example, directed cell migration toward specific regions of the embryo is essential in
+        determining the correct localizations of future sites of tissues. Cell migration during tissue morphogenesis
+        is crucial for the proper development of tissues and organs. In adults, immune cells migrate through tissues
+        and stromal networks to probe the body for foreign agents and during the immune response to an
+        infection. In regenerative tissues in adults, such as the gut, cell migration is crucial to
+        ensure homeostatic function in these tissues. In later stages of tumor progression in cancer,
+        the migration of cancer cells away from a primary tumor, a process known as <i>tumor invasion</i>,
+        can lead to later metastasis at secondary sites. Currently, during my postdoc in the
+        <a href="https://science.institut-curie.org/research/multiscale-physics-biology-chemistry/umr144-subcellular-structure-and-cellular-dynamics/team-vignjevic/">Vignjevic Lab</a>,
+        we are trying to better understand cell migration in different contexts using a wealth of different
+        model systems and experimental setups.
+    </p>
+    <p class="justify">
+        Despite the importance of tumor invasion in epithelial cancer progression,
+        surprisingly little is known about how cancer cells escape the tumor and migrate through the
+        surrounding tissue. Histological studies have shown that invading cancer cells can have a wide
+        variety of morphologies, and collective modes of migration are commonly observed in human
+        epithelial cancers (Reviewed in Clark and Vignjevic, 2015).
+    </p>
+    <img src="{{ url_for('static', filename='content/media/collective_invasion.jpg') }}" alt="collective invasion" class="research-img">
+    <p class="caption">
+        <b> Collective cancer cell invasion.</b> Tissue from a colon cancer patient with an invasive
+        carcinoma. <i>Left:</i> Images showing normal (N) and tumorous (T) glands, separated
+        by stromal (S) regions. <i>Right:</i> Higher magnification images showing invading
+        gland-like cell aggregates (arrow) and smaller tumor "buds" (arrowhead).
+        (Modified from Clark and Vignjevic, 2015.)
+    </p>
+    <p class="justify">
+        To better understand how cells migrate in a directed manner, we have developed
+        microfluidics devices that can be used to expose cells and cell aggregates to tuneable chemical gradients
+        while embedded in 3D matrices. Could observe a dramatic chemotactic response using dendritic cells,
+        a type of immune cell, exposed to gradients of the chemokine CCL19.
+    </p>
+    <video src="{{ url_for('static', filename='content/media/movies/dc_chemotaxis.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/dc_chemotaxis.png') }}" class="research-video"></video>
+    <p class="caption">
+        <b>Dendritic cell cheomtaxis.</b> Primay matured Dendritic Cells (mDCs), a type of immune
+        cell, migrating in a microfluidic device with a gradient of attractive chemokine
+        from the top. In response to the chemical gradient, cells move in a directed manner
+        up the gradient. (From Aizel and Clark et al, 2017.)
+    </p>
+    <p class="justify">
+        We can also embed large spheroids of cancer cells in the microfluidics chambers and exposed
+        these aggregates to chemical gradients in order to elicit biased tumor cell invasion. This
+        experimental model mimics the invasion of cancer cells away from a primary tumor in response to
+        chemical cues from the microenvironment.
+    </p>
+    <video src="{{ url_for('static', filename='content/media/movies/spheroid_chemotaxis.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/spheroid_chemotaxis.png') }}" class="research-video"></video>
+    <p class="caption">
+        <b>Biased cell invasion.</b> A large (~500 micron diameter) aggregate of cancer cells
+        in a microfluidic device, exposed to a gradient of attractive medium from the top. Cells
+        migrate away from the aggregate in a biased manner up the gradient. (From Aizel and Clark et al, 2017.)
+    </p>
+    <p class="justify">
+        We are also interested in better understanding the invasion process itself. One assay we employ
+        to assess the dynamics and mechanisms underlying cancer cell invasion and migration in the stroma
+        is a spheroid invasion assay. Similar to chemotaxis assays using aggregates, we embed spheroids
+        of cancer cells in 3D collagen matrices, and using image analysis methods, we can precisely
+        quantify numbers, positions and migration distances of invading cells.
+    </p>
+    <img src="{{ url_for('static', filename='content/media/spheroid_invasion_assay.jpg') }}" alt="spheroid invasion assay" class="research-img">
+    <p class="caption">
+        <b>Cell invasion into a 3D collagen matrix.</b> <i>Left:</i> Cells migrate away from a spheroid of
+        cancer cells embedded in a 3D network of collagen. <i>Right:</i> Analysis of the
+        images on the left provide the contour of the spheroid (blue), positions of the
+        invading cells (red spheres) and their distance from the spheroid contour (black lines).
+        (From Attieh et al, 2017 and courtesy of Youmna Attieh.)
+    </p>
+    <p class="justify">
+        We also use number of other assays to assess migration of both normal and cancer cells using
+        primary tissue from mouse models, including tissue explant models and 2D and 3D organoid
+        cultures. Combining high-resolution live image imaging and image analysis, our aim is to more
+        precisely characterize and understand the underlying principles and control points of tissue
+        migration in healthy and disease states.
+    </p>
+</div>
+<br>
+<button type="button" class="collapsible">The Actin Cortex</button>
+<div class="content">
+    <p class="justify">
+        The actin cortex is a thin network of F-actin, myosin and associated proteins that underlies
+        the plasma membrane (PM). The cortex provides stability to the cell surface and is
+        the primary determinant of cell surface mechanics in most animal cells. As a result, the
+        the cortex allows cells to resist external forces and change shape.
+    </p>
+    <p class="justify">
+        In my previous work in the lab of <a href="https://www.ucl.ac.uk/lmcb/users/ewa-paluch">Professor Ewa K Paluch</a>,
+        I developed a novel method to measure the thickness of the cortical network in live cells.
+        This method was inspired by Single-molecule High Resolution Colocalization (SHREC), which
+        relies on the fact that although sub-resolution geometry cannot be resolved, point-like
+        objects can be localized with up to nanometer precision, even with a light microscope.
+        To measure cortex thickness, we labeled the PM and cortex with chromatically different
+        fluorophores (Figure 2A,B; Clark et al, 2013). Using a theoretical description of cortex geometry,
+        we could use the information about the relative localization of the cortex and PM to determine
+        cortex thickness (Figure 2C; Clark et al, 2013). We performed a number of controls to verify
+        this method, including using different fluorescent probes for actin, changing the colors
+        of the probes and analyzing computer-generated images of cells.
+    </p>
+    <img src="{{ url_for('static', filename='content/media/cortex_thickness.jpg') }}" alt="cortex thickness" class="research-img">
+    <p class="caption">
+        <b>Cortex thickness measurements.</b> <b>A.</b> Schematic representation of
+        method to measure cortex thickness. Cortical actin and the plasma membrane are labelled
+        with chromatically different fluorophores, and distance between the fluorescence peaks,
+        &Delta; is measured and related to cortex thickness, <i>h</i>. <b>B.</b> A HeLa cell
+        expressing GFP-Actin and mCherry-CAAX, a marker for the plasma membrane. <i>Bottom</i>,
+        a straightened image of the cell border. Scale bars: 10 &mu;m. <b>C.</b> A simple theoretical
+        description of cortex geometry showing the actin model, a convolution of the actin model
+        (to mimic the imaging process) and the position of the membrane. (Modified from
+        Clark et al, 2013.)
+    </p>
+    <p class="justify">
+        To test if this method could be used to used in live cells undergoing shape change, we measured
+        cortex thickness in blebs. <a href="http://en.wikipedia.org/wiki/Bleb_%28cell_biology%29">Blebs</a>
+        are membrane protrusions that can form from a local weak point in the cortex. Because intracellular
+        pressure is higher than extracellular pressure, cytosol flows from the cell body through the
+        weak point in the cortex, blowing up the plasma membrane like a balloon. The bleb continues
+        to expand until a new actin cortex reforms under the bleb membrane. The contractile actin
+        cortex in the bleb first slows bleb growth and eventually leads to retraction of the bleb
+        back into the cell body. Blebs have been shown to play a role in cytokinesis (Movie 2) and are also
+        used in some forms of cell migration (Movie 3).
+    </p>
+    <video src="{{ url_for('static', filename='content/media/movies/bleb_cytokinesis.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/bleb_cytokinesis.png') }}" alt="bleb cytokinesis" class="research-video"></video>
+    <p class="caption">
+        <b>Blebs in cytokinesis.</b> A HeLa cell blebbing at the polar regions during cytokinesis.
+        Such polar blebbing has been hypothesized to stabilize the position of the cleavage furrow
+        and ensure successful cytokinesis. (From Sedzinski and Biro et al, 2011.)
+    </p>
+        <video src="{{ url_for('static', filename='content/media/movies/bleb_migration.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/bleb_migration.png') }}" alt="bleb migration" class="research-video"></video>
+    <p class="caption">
+        <b>Blebs in migration.</b> A non-adherent Walker rat 256 carcinosarcoma cell in confinement
+        can move via polarized bleb formation at the leading edge. Scale bar: 10 &mu;m.
+        (From Bergert et al, 2012.)
+    </p>
+    <p class="justify">
+        Because blebs initially lack an actin cortex, this provided an ideal
+        system to test our method to measure cortex thickness. By measuring thickness in blebs, we
+        would initially expect a low thickness, when the cortex is just starting to reform, and thickness
+        would then increase over time as the cortex regrew. We induced blebs by locally ablating the
+        cortex with a pulsed UV laser, which induced a bleb at the site of ablation (Movie 4; Clark
+        et al, 2013). By following cortex thickness over time in blebs, we found that the bleb cortex
+        was indeed initially thin and grew thicker over time, eventually returning to the pre-ablation
+        thickness (Clark et al, 2013).
+    </p>
+        <video src="{{ url_for('static', filename='content/media/movies/bleb.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/bleb.png') }}" alt="induced bleb" class="research-video"></video>
+    <p class="caption">
+        <b>Inducing blebs by laser ablation.</b> A HeLa cell expressing GFP-Actin and
+        mCherry-CAAX. At t=0, the cortex is ablated with a pulsed laser to induce a bleb.
+        Scale bar: 5 &mu;m. (From Clark et al, 2013.)
+    </p>
+    <p class="justify">
+        Following our initial characterization of cortex thickness, we went on to uncover some of the
+        mechanisms that control cortex thickness.  We found that cortex architecture and mechanics
+        are regulated in a cell cycle-dependent fashion, where the cortex is thicker and less tensile
+        in interphase compared to mitosis. Furthermore, we found that proteins that control actin
+        filament length regulate both cortex thickness and tension. Using a theoretical model and
+        simulations, we found that varying cortical actin filament length is sufficient to modulate
+        both cortex thickness and tension.
+    </p>
+        <video src="{{ url_for('static', filename='content/media/movies/cortex_simulation_500nm_filaments.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/cortex_simulation_500nm_filaments.png') }}" alt="cortex simulation" class="research-video"></video>
+    <p class="caption">
+        <b>Simulation of a 3D cortex</b> Simulating actin filaments, myosin motors and actin
+        cross-linkers  in a 3D volume shows how tension builds over time. Using such models,
+        we can change a number of microscopic parameters and test how they affect larger scale
+        properties like tension, allowing us to predict aspects of how cortex mechanics are controlled.
+        (From Chugh, Clark and Smith et al, 2017 and courtesy of Matt Smith)
+    </p>
+    <p class="justify">
+        Based on our results from experiments and simulations, we found that cortical tension is
+        maximal at intermediate filament lengths, suggesting that filament length and the resulting
+        cortex architecture must be tightly controlled to ensure proper maintainence of cortex
+        tension.
+    </p>
+    <img src="{{ url_for('static', filename='content/media/tension_thickness_model.jpg') }}" alt="tension thickness model" class="research-img">
+    <p class="caption">
+        <b> Relationship between cortical filament length/tension and tension </b>
+        Cortical tension peaks at intermediate filament lengths, which corresponds to an
+        intermeidate cortex thickness. The reason for the peak in tension at intermediate
+        filament lengths is that if filaments are too short, the network is not well-connected
+        enough to sustain long-range forces, while if filaments are too long, the network
+        becomes overly connected and cannot be sufficiently deformed. At intermediate filament
+        lengths, the network is sufficiently connected and sufficiently deformable. The fact
+        that in these networks, tension can be sustained while local contractions result in
+        network "buckling", allows intermediate filament length networks to support long-range
+        network tension (Modified from hugh, Clark and Smith et al, 2017.)
+    </p>
+</div>
+<br>
+<button type="button" class="collapsible">Wound Healing and Cytokinesis</button>
+<div class="content">
+    <p class="justify">
+        In my previous work in the <a href="http://bement.molbio.wisc.edu/">Bement Lab</a> at the
+        University of Wisconsin-Madison, I also studied the actin cortex, but in a very different
+        context. The Bement lab uses the African Clawed Frog, <i>Xenopus laevis</i>,
+        as a model system to study how single cells repair wounds and how cells divide.
+    </p>
+    <p class="justify">
+        Cells in the body can be subject to a number of stresses that may induce physical damage to
+        the cell. For example, when you exercise, muscle cells are stretched and strained, which can
+        lead to small tears in the cells; if this tearing in extensive enough, it can also be quite
+        painful! For many cell types in the body, when a cell experiences damage, it would be inefficient
+        or even impossible to simply get rid of the damaged cell and generate a new replacement.
+        Muscle cells, for example, can be up to several cm in length and can fuse together to increase
+        the length of a single cell. Single neurons can be over a meter long in humans (depending
+        on a person's height) and do not have the capacity to regenerate in adults. Thus, when muscle
+        cells and neurons experience physical damage, intrinsic processes must be in place to repair
+        this damage and prevent cell death.
+    </p>
+    <p class="justify">
+        One system that the Bement lab uses to study wound healing is the <i>Xenopus</i> oocyte,
+        which are approximately 1 mm in diameter (clearly visible by the naked eye) and are very
+        robust wound healers. These oocytes can be poked with glass needles or shot with pulsed
+        lasers and continue to survive happily after they have repaired the damage. Oocytes, like
+        most other animal cells, have an actin cortex underlying the plasma membrane. When cells
+        are wounded, not only is the plasma membrane torn, but the cortex is disrupted as well. In
+        order to repair the damage to the cortex, actin and myosin accumulate in a contratile ring
+        around the wound and the ring contracts over several minutes to seal the hole in the cortex.
+        Movie 5 (below) from <a href="http://people.mcgill.ca/craig.mandato/lab/">Craig Mandato</a>,
+        a former postdoc in the Bement lab, shows a the accumulation of actin into a contractile
+        ring following wounding of a <i>Xeonpus</i> oocyte with a pulsed laser.
+    </p>
+    <video src="{{ url_for('static', filename='content/media/movies/wound_healing.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/wound_healing.png') }}" alt="wound healing" class="research-video"></video>
+    <p class="caption">
+        <b>Wound healing in a <i>Xenopus laevis</i> oocyte.</b> A <i>Xenopus</i> oocyte
+        injected with fluorescent phalloidin (a probe for F-actin) is wounded using a pulsed
+        laser. F-Actin accumulates into a contractile ring which constricts, closing the hole
+        in the cortex. (From Mandato and Bement, 2001.)
+    </p>
+    <p class="justify">
+        One of my projects in the Bement lab was to peform a screen of small molecule inhibitors
+        to find new chemicals that could prevent actomyosin contraction during single-cell wound
+        healing and cytokinesis. I performed a manual screen of 1990 small molecules by incubating
+        <i>Xenopus</i> oocytes in the chemicals, stabbing them with a glass needle and scoring
+        their survival and efficacy in wound healing. In parallel, collaborators Jenny Sider and
+        <a href="http://www.gvondassow.com/Research_Site/Home.html">George von Dassow</a>
+        screened the same set of chemicals for inhibition of cytokinesis in Sand Dollar (<i>Dendraster excentricus</i>)
+        embryos. We followed up on hits from the parallel screens and discovered two potent inhibitors
+        of wound healing and cytokinesis, Sphinctostatin-1 and -2 (Clark et al, 2012).
+    </p>
+    <p class="justify">
+        In the Bement lab, I also studied how cells heal wounds in the context of a multicellular
+        tissue. For this study, we wounded cells in early <i>Xenopus</i> embryos using a pulsed
+        laser. Surprisingly, we found that if cells were wounded in the proximity of neighboring
+        cells, the neighboring cells would also upregulate contractile actomyosin and help the cell
+        to heal its wound (Movie 6).
+    </p>
+        <video src="{{ url_for('static', filename='content/media/movies/multicell_wound_healing.mp4') }}" preload controls poster="{{ url_for('static', filename='content/media/movies/multicell_wound_healing.png') }}" alt="multicell wound healing" class="research-video"></video>
+    </p>
+    <p class="caption">
+        <b>Wound healing in an early <i>Xenopus</i> embryo.</b> A single cell in a
+        <i>Xenopus</i> embryo expressing EGFP-rGBD (a probe for active RhoA) and mRFP-Utrophin
+        (a probe for F-actin) is wounded. A RhoA is activated and F-actin accumulates in a contractile
+        ring, neighboring cells also upregulate RhoA and F-Actin, which contributes to healing the
+        wounded cell (From Clark et al, 2009.)
+    </p>
+    <p class="justify">
+        The Bement lab continues to study both wound healing and cytokinesis and also focuses on
+        cross-talk between actin filaments and microtubules. Be sure to check out
+        <a href="http://bement.molbio.wisc.edu/">Bill</a> and
+        <a href="http://www.gvondassow.com/Research_Site/Home.html">George</a>'s websites
+        for great movies of these processes!
+    </p>
+</div>
+<br>
+<button type="button" class="collapsible">References</button>
+<div class="content">
+    <p class="justify">
+        Aizel, K.*, Clark, A.G.*, Simon, A., Geraldo, S., Funfak, A., Vargas, P., Bibette, J., Vignjevic, D.M. and Bremond, N. (2017) A Tuneable Microfluidic System for Long Duration Chemotaxis Experiments in a 3D Collagen Matrix. <i>Lab Chip</i>, 17(22):3851-3861.
+    </p>
+    <p class="justify">
+        Attieh, Y., Clark, A.G., Grass, C., Richon, S., Elkhatib, N., Betz, T., Gurchenkov, B. and Vignjevic, D.M. (2017) Cancer-associated Fibroblasts Lead Tumor Invasion through Integrin &Beta;3 Dependent Fibronectin Assembly. <i>J Cell Biol</i>, 216(11):3509-3520.
+    </p>
+    <p class="justify">
+        Bergert, M., Chandradoss, S.D., Desai, R.A. and Paluch, E. (2012) Cell Mechanics Control Rapid Transitions between Blebs and Lamellipodia during Migration. <i>Proc Natl Acad Sci USA</i>, 109(36):14434-14439.
+    </p>
+    <p class="justify">
+        Chugh, P.*, Clark, A.G.*, Smith, M.B.*, Cassani, D.A.D., Ragab, A., Roux, P.P., Charras, G., Salbreux, G. and Paluch, E.K. (2017) Actin Cortex Architecture Regulates Cell Surface Tension. <i>Nat Cell Biol</i>, 19(6):689-697.
+    </p>
+    <p class="justify">
+        Clark, A.G., Miller, A.L., Vaughan, E., Yu, H.-Y.E., Penkert, R. and Bement, W.M. (2009) Integration of Single and Multicellular Wound Responses. <i>Curr Biol</i>, 19:1389-1395.
+    </p>
+    <p class="justify">
+        Clark A.G., Sider J.R., Verbrugghe K., Fenteany G., von Dassow G. and Bement, W.M. (2012) Identification of Small Molecule Inhibitors of Cytokinesis and Single Cell Wound Repair. <i>Cytoskeleton</i>, 69(11):1010-1020.
+    </p>
+    <p class="justify">
+        Clark A.G., Dierkes K. and Paluch, E.K. (2013) Monitoring Actin Cortex Thickness in Live Cells. <i>Biophys J</i>, 105(3):570-580.
+    </p>
+    <p class="justify">
+        Clark, A.G. and Vignjevic, D.M. (2015) Modes of Cancer Cell Invasion and the Role of the Microenvironment. <i>Curr Opin Cell Biol</i>, 36:13-22.
+    </p>
+    <p class="justify">
+        Mandato, C.A. and Bement W.M (2001) Contraction and polymerization cooperate to assemble and close actomyosin rings around Xenopus oocyte wounds. <i>J Cell Biol</i>, 154(4):785-798.
+    </p>
+    <p class="justify">
+        Sedzinski, J., Biro, M., Oswald, A., Tinevez, J.-Y., Salbreux G., and Paluch. E. (2011) Polar actomyosin contractility destabilizes the position of the cytokinetic furrow. <i>Nature</i>, 476(7361):462-466.
+    </p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+{% endblock content %}

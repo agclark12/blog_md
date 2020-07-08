@@ -1,8 +1,7 @@
 import os
-from datetime import date, datetime
+from datetime import date
 
-from flask import (render_template, g, request, redirect, url_for, flash, abort,
-                   send_from_directory, render_template_string, Markup)
+from flask import render_template, request, redirect, url_for, flash, abort, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer

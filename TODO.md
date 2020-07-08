@@ -1,3 +1,2 @@
-* Move the configs into a separate file
-* Make separate configs for dev and production
-* Figure out how to make different paths for the db for dev/production
+* Set up cron jobs on the production server for updating software, clearing logs and backing up
+ 

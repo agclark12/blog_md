@@ -9,3 +9,8 @@ misc/*
 *.mp4
 *.png
 *.jpg
+instance
+instance/*
+config/development.py
+config/production.py
+config/listen.py

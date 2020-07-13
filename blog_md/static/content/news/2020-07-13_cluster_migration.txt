@@ -1,0 +1,4 @@
+cluster_coll_w_seg.jpg
+Collective migration on collagen networks
+https://doi.org/10.1101/2020.07.11.198739
+In this new paper, we use a combination of experiments and theory to show that viscoelastic relaxation in collagen networks can provide a self-generated directional cue during collective migration.

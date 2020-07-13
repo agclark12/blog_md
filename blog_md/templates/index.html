@@ -14,13 +14,22 @@
     {% for i in range(3) %}
         <div class="col-sm-4">
             <div class="row news-img">
-                <img src="{{ url_for('static', filename='content/news/media/'+news_list[i][0]) }}" alt="news_{{i}}">
+                <a href="{{ news_list[i][2] }}">
+                    <img src="{{ url_for('static', filename='content/news/media/'+news_list[i][0]) }}" alt="{{news_list[i][0]}}">
+                </a>
             </div>
             <div class="row news-caption text-center">
-                <h5 class="news-caption"><b>{{ news_list[i][1] }}</b></h5>
+                <a href="{{ news_list[i][2] }}">
+                    <h5 class="news-caption">{{ news_list[i][1] }}</h5>
+                </a>
             </div>
             <div class="row news-text">
-                <p class="justify">{{ news_list[i][2] }}</p>
+                <p class="justify">{{ news_list[i][3] }}</p>
+            </div>
+            <div class="row news-text">
+                <a href="{{ news_list[i][2] }}">
+                    <h7>read more...</h7>
+                </a>
             </div>
         </div>
     {% endfor %}

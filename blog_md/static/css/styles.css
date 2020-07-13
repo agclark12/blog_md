@@ -105,10 +105,17 @@ body {
 }
 
 .news-caption {
+  color: black;
+  text-decoration: none;
   width:85%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
+}
+
+.news-caption:hover {
+  color: #0FA0CE;
+  text-decoration: underline;
 }
 
 .news-img {

@@ -1,3 +1,4 @@
 chemotaxis_toc.jpg
 Chemotaxis of cell aggregates in 3D networks
+https://doi.org/10.1016/bs.mcb.2018.06.007
 In this recent paper, we developed a microfluidics device to expose cells and cell aggregates to chemical gradients in 3D collagen networks, allowing us to control directional migration in a tuneable manner.

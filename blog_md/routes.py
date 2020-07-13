@@ -38,12 +38,12 @@ def index():
     news_file_list = [_ for _ in os.listdir(NEWS_DIR) if '.txt' in _]
     news_file_list.sort(reverse=True)
     news_file_list = news_file_list[:3]
-    news_list = [[[],[],[]] for _ in news_file_list]
+    news_list = [[[],[],[],[]] for _ in news_file_list]
     for i in range(len(news_file_list)):
         news_file = news_file_list[i]
         ifile = open(os.path.join(NEWS_DIR,news_file),'r')
         lines = ifile.readlines()
-        for j in range(3):
+        for j in range(4):
             news_list[i][j] = lines[j].split('\n')[0]
     post_list = [p for p in flatpages if p.path.startswith(POST_DIR)]
     post_list.sort(key=lambda item:item['date'], reverse=True)

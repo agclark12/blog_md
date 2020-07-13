@@ -1,3 +1,4 @@
 tumor_core_migration.jpg
 Coordinated cell migration in the tumor core
+https://doi.org/10.1242/jcs.220277
 In this paper from Staneva et al, we analyze collective migration patterns of cancer cells in the core of intestinal tumors, using live-imaging of tumor explants combined with quantitative image analysis.

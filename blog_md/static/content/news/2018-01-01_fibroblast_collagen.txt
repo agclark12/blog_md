@@ -1,3 +1,4 @@
 attieh_et_al_cover_square.jpg
 Cancer-associated fibroblasts and tumor invasion
-In this paper from Attieh et al, we investigate how cancer-associated fibroblasts (CAFs) influence invasive migration away from cancer cell aggregates.
+https://doi.org/10.1083/jcb.201702033
+In this paper from Attieh et al, we investigate how cancer-associated fibroblasts (CAFs) promote invasive migration away from cancer cell aggregates by depositing fibronectin in a contractility-dependent manner.

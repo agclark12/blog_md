@@ -33,4 +33,4 @@ It turned out to be a really fun little project.
 And now I have even real backend for this website!
 I'll try to post when I can about science, programming, books, etc.
 Also, I'll make the git repo for the website public at some point once I clean it up a little.
-You'll be able to find that on the <a href="{{url_for('resources' )}}">resources page</a>.
+You'll be able to find that on the <a href="{{url_for('resources')}}">resources page</a>.

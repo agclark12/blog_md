@@ -1,6 +1,6 @@
 title: Largest Rectangle Algorithm
 date: 2020-05-02
-tag: technical
+tag: image analysis
 summary: Notes on using the largest rectangle algorithm for automatically cropping crooked images.
 
 Most of my research deals in some way live microscopy data and the analysis thereof.

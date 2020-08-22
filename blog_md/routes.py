@@ -110,7 +110,10 @@ def posts_tagged(tag):
     tags = [p['tag'] for p in post_list]
     tags = util.natural_sort(util.get_unique_list(tags))
     post_list = [p for p in post_list if p['tag']==tag]
-    return render_template('posts_tagged.html', tag=tag, posts=post_list, tags=tags, title="Blog - %s"%tag)
+    if len(post_list) > 0:
+        return render_template('posts_tagged.html', tag=tag, posts=post_list, tags=tags, title="Blog - %s"%tag)
+    else:
+        abort(404)
 
 @app.route('/research_interests/')
 def research_interests():
@@ -253,7 +256,6 @@ def forbidden(e):
 
 @app.errorhandler(404)
 def page_not_found(e):
-
     return render_template('404.html'), 404
 
 @app.errorhandler(500)

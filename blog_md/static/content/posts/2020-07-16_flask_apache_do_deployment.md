@@ -1,6 +1,6 @@
 title: Deploying a Python Flask app with Apache at Digital Ocean
 date: 2020-07-16
-tag: technical
+tag: website
 summary: An overview of how I deployed this Flask-powered website on a virtual server at Digital Ocean using Apache.
 
 As I had written in a <a href="http://www.andrewgclark.info/posts/2020-06-18_about_this_site/">previous post</a>,

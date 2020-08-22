@@ -1,6 +1,6 @@
 title: About this site
 date: 2020-06-18
-tag: misc
+tag: website
 summary: A few words about what went into making this site.
 
 Once in a great while I come across something new or interesting (usually related to image analysis), and I feel the urge to share it.

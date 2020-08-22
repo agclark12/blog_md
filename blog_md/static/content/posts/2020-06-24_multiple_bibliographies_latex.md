@@ -1,7 +1,7 @@
 title: Multiple bibliographies in LaTeX
 date: 2020-06-24
-tag: technical
-summary: How to use generate bibliogrpahies in LaTeX to account for references used only in the supplementary information.
+tag: latex etc
+summary: How to use generate bibliographies in LaTeX to account for references used only in the supplementary information.
 
 Most manuscripts nowadays (in my field anyway) have separate supplementary information that usually includes some additional references.
 These may be to support supplementary/online-only methods or explanations about theory, etc.

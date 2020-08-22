@@ -245,3 +245,7 @@ hr.double {
 }
 
 .col-pad { margin:10px; padding:10px; }
+
+.dropdown-menu {
+    font-size: 15px;
+  }

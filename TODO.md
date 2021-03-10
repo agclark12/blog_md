@@ -3,4 +3,7 @@
 - post: pdfjam
 - post: reducing pdf size with gs
 - post: cmb
+- post: plotting ratios on log scale
+- post: averaging polar angles
+- post: plotting angular differences
 - Use blueprints to split up booklist (and other future projects)

@@ -6,31 +6,34 @@
     <img src="{{url_for('static', filename='content/media/photo_clark.jpg')}}" width="150" style= "border:2px solid black"  alt="photo">
 </p>
 <p class="space-below-small">
-    Hi, my name is Andrew. I grew up in Wisconsin and received my Bachelor's degree in
-    Molecular Biology from the University of Wisconsin-Madison in 2007.
-    Following my undergraduate work, I moved to Dresden, Germany to do my PhD in Cell Biology
-    and Biophysics, which I completed in 2013. Following a short follow-up postdoc
-    at University College London, I moved to Paris to do a postdoc at the Institut Curie.
+    Hi, my name is Andrew.
+    I grew up in Wisconsin and received my Bachelor's degree in Molecular Biology from the University of Wisconsin-Madison in 2007, studying epithelial wound repair and cytokinesis in the lab of Bill Bement.
+    Following my undergraduate work, I moved to Dresden, Germany to the Max Planck Institute for Molecular Cell Biology and Genetics, where I did his PhD studying the organization and mechanics of the cellular actin cortex in the lab of Ewa Paluch.
 </p>
 <p class="space-below-small">
-    During my time at Curie, I have been interested in understanding how cells move
-    together in groups in different environments.
-    This has ranged from projects looking at migration of large aggregates of cells
-    in extracellular matrices <i>in vitro</i> to collective movements of cells in tumor
-    explants.
+    Following a short follow-up postdoc at University College London, I moved to Paris, France to do a postdoc at the Institut Curie in the lab of Danijela Vignjevic.
+    During my postdoc, I studied collective cell migration in a number of contexts, including using microfluidic devices to study collective chemotaxis, mechanical interactions between cells and ECM networks during migration and collective migration in the intestinal epithelium.
 </p>
 <p class="space-below-small">
-    These days, I typically split my time about 50/50 between experiments in the lab and
-    writing software to analyze my data. For the most part, my image and data analysis and
-    visualization software is written in Python using various scientific libraries.
-    I also rely pretty heavily on the ImageJ Macro scripting language for image pre-processing.
-    At the moment, I am branching out to learn new techniques to incorporate into my
-    data analysis software.
+    I started my own lab in May 2021 as a joint position between the University of Stuttgart Institute of Cell Biology and Immunology and the University of Tübingen Center for Personalized Medicine, where my lab studies intestinal epithelial dynamics in physiology and disease.
 </p>
 <p class="space-below-small">
-    If you would like to know more, please feel free to have a look at my
+    If you would like to know more, please feel free to visit my
+    <a href="https://www.izi.uni-stuttgart.de/en/research/clark/">lab website</a>
+    or check out my
     <a href="{{ url_for('research_interests') }}">research interests</a>
-    or my <a href="{{ url_for('cv') }}">CV</a> or visit my online scientific profiles
-    on my <a href="{{ url_for('contact') }}">contact page</a>.
+    or my
+    <a href="{{ url_for('cv') }}">CV</a>.
+    Thanks for visiting!
 </p>
+<p class="space-below-small">
+    <a href="https://twitter.com/_andrewgclark"><img src={{url_for('static', filename='content/media/twitter_logo.png')}} alt="tw_logo"  width="30"/></a>
+    &nbsp
+    <a href="https://www.linkedin.com/in/andrew-clark-05201422"><img src={{url_for('static', filename='content/media/linkedin_logo.png')}} alt="li_logo"  width="30"/></a>
+    &nbsp
+    <a href="https://www.researchgate.net/profile/Andrew_Clark31"><img src={{url_for('static', filename='content/media/researchgate_logo.png')}} alt="rg_logo"  width="30"/></a>
+    &nbsp
+    <a href="http://scholar.google.de/citations?user=FlsZVCsAAAAJ&hl=en&oi=sra"><img src={{url_for('static', filename='content/media/googlescholar_logo.png')}} alt="gs_logo"  width="30"/></a>
+</p>
+
 {% endblock content %}

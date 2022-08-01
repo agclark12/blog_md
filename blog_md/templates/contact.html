@@ -2,28 +2,26 @@
 
 {% block content %}
 
-<div class="row">
-
-    <div class="four columns">
-        <h3>Address:</h3>
-        <p class="space-below-small">
-            Andrew Clark, Vignjevic Team<br>
-            Institut Curie / UMR 144<br>
-            12 Rue Lhomond<br>
-            75005 Paris<br>
-            FRANCE
-        </p>
-        <h3>Email:</h3>
-        <p class="space-below-small"><a href="mailto:andrew.clark@curie.fr">andrew.clark@curie.fr</a></p>
-    </div>
-
-    <div class="four columns">
-        <h3>Online profiles:</h3>
-        <p class="space-below-small"><a href="https://www.researchgate.net/profile/Andrew_Clark31"><img src={{url_for('static', filename='content/media/research_gate_logo.png')}} alt="rg_logo"  width="200"/></a></p>
-        <p class="space-below-small"><a href="https://www.linkedin.com/in/andrew-clark-05201422"><img src={{url_for('static', filename='content/media/linkedin_logo.jpg')}} alt="linkedin_logo" width="200" /></a></p>
-        <p class="space-below-small"><a href="http://scholar.google.de/citations?user=FlsZVCsAAAAJ&hl=en&oi=sra"><img src={{url_for('static', filename='content/media/google_scholar_logo.png')}} alt="google_scholar_logo"  width="200"/></a></p>
-    </div>
-
-</div>
+<h3>Contact Info:</h3>
+<p class="space-below-small">
+    Andrew Clark<br>
+    University of Stuttgart<br>
+    Institute of Cell Biology and Immunology<br>
+    Allmandring 5b<br>
+    70569 Stuttgart<br>
+    GERMANY<br>
+</p>
+<p class="space-below-small">
+    <a href="mailto:andrew.clark@srcsb.uni-stuttgart.de">andrew.clark@srcsb.uni-stuttgart.de</a>
+</p>
+<p class="space-below-small">
+    <a href="https://twitter.com/_andrewgclark"><img src={{url_for('static', filename='content/media/twitter_logo.png')}} alt="tw_logo"  width="50"/></a>
+    &nbsp
+    <a href="https://www.linkedin.com/in/andrew-clark-05201422"><img src={{url_for('static', filename='content/media/linkedin_logo.png')}} alt="li_logo"  width="50"/></a>
+    &nbsp
+    <a href="https://www.researchgate.net/profile/Andrew_Clark31"><img src={{url_for('static', filename='content/media/researchgate_logo.png')}} alt="rg_logo"  width="50"/></a>
+    &nbsp
+    <a href="http://scholar.google.de/citations?user=FlsZVCsAAAAJ&hl=en&oi=sra"><img src={{url_for('static', filename='content/media/googlescholar_logo.png')}} alt="gs_logo"  width="50"/></a>
+</p>
 
 {% endblock content %}

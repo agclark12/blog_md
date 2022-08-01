@@ -1,4 +1,4 @@
 2d_organoid.jpg
 Intestinal organoid mechanics
 https://doi.org/10.1038/s41563-022-01259-5
-In this new paper from Pérez-González et al, we use a novel 2D intestinal organoid monolayer approach to study the mechanics of the intestinal epithelium.
+In this new paper from Perez-Gonzalez et al, we use a novel 2D intestinal organoid monolayer approach to study the mechanics of the intestinal epithelium.

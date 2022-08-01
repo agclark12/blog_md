@@ -1,3 +1,4 @@
+- Make a news archive page
 - post: segmentation with k-means
 - post: normal segmentation workflow with ilastik
 - post: pdfjam
